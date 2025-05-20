@@ -82,7 +82,7 @@ function OdhlasitSe(){
 }
 
 async function PrihlasitSe(){
-     const data = DostatData("login");
+    const data = DostatData("login");
     
     if(data === undefined){return;} // Pokud není data, ukonči funkci
     const jmeno = data[0];
@@ -91,7 +91,7 @@ async function PrihlasitSe(){
    const response = await fetch('api/users/login',{
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(jmeno, heslo)
+    body: JSON.stringify({jmeno, heslo})
    })
    if(response.ok){
         alert("Úspěšně přihlášeno jako moderátor.");
@@ -101,7 +101,7 @@ async function PrihlasitSe(){
         jePrihlasen = true; 
         ZobrazitAdminRezervaci();
    }else{
-       alert("Přihlášení se nezdařilo.");
+       alert("uci uroki, poc");
    }
 }
 
