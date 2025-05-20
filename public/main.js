@@ -411,7 +411,7 @@ function UpravitRezervaci(idRezervaci){
    const radekRezervace = document.getElementById(idRezervaci); // Získání těla tabulky podle ID
    const vsechnyBunky = radekRezervace.querySelectorAll('td'); // Získání všech řádků v těle tabulky
    
-   const tlacitko = document.getElementById('edit'); // Získání tlačítka pro úpravu rezervace
+  const tlacitko = radekRezervace.querySelector('edit'); // Získání tlačítka pro úpravu rezervace
    tlacitko.style.backgroundColor =  "#1b610b"; // Změna barvy pozadí tlačítka
    
    if(!radekRezervace.jePovolenaOprava){ // Kontrola stavu úpravy
