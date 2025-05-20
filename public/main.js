@@ -441,6 +441,7 @@ function DostatOpravenaDataBunky(vsechnyBunky){
         bunka.byloOpraveno = false; // Nastavení stavu na false
     }
    }
+    consoele.log(paramenty, hodnoty);
    return {paramenty, hodnoty}; // Vrátí pole s hodnotami
 }
 
