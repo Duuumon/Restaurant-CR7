@@ -429,6 +429,7 @@ function UpravitRezervaci(idRezervaci){
    }
 }
 
+
 function DostatOpravenaDataBunky(vsechnyBunky){
 
    let paramenty = [];
