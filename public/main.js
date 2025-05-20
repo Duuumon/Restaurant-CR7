@@ -359,6 +359,7 @@ async function VytvorSeznamRezervaci() {
     adminRezervace.innerHTML = "";
     adminRezervace.appendChild(tabulka);
     adminRezervace.appendChild(canvas); // Přidání grafu do panelu
+    VytvorGraf();
 }
 
 /*=======================================| Zobrazeni grafu |==================================================*/
