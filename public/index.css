@@ -1,0 +1,170 @@
+/*Navigation bar*/
+body {
+  margin: 0;
+  font-family: "Jersey 25";
+  padding-top: 70px; /* výška navigační lišty + mezera */
+  background-color:#1f1f1f;
+}
+#logo{
+  cursor: pointer;
+  width: 50px; /* Nastavení šířky loga */
+  height: auto; /* Zachování poměru stran */
+  margin-right: auto;
+}
+#admin{
+  cursor: pointer;
+  width: 35px; /* Nastavení šířky loga */
+  height: 35px; /* Zachování poměru stran */
+  padding-top: 5px;
+}
+#confirm{
+  width: 35px; /* Nastavení šířky loga */
+  height: 35px; /* Zachování poměru stran */
+  padding-top: 5px;
+  padding-right: 10px;
+  visibility: hidden;                                               /*TADY VIZIBLE PRO OBRAZEK PODTVRIT NA NAVIGATION BAR*/
+}
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  background-color: black;
+  padding: 10px 20px;
+  position: fixed;  /* Udržuje navigaci na vrcholu při skrolování */
+  top: 0;
+  width: 98%;  /* Zajistí, že navigační lišta bude mít šířku celé stránky */
+  z-index: 1000;  /* Zajistí, že lišta bude vždy nad ostatním obsahem */
+}
+
+.navbar button {
+  background-color: transparent;
+  color: darkgray;
+  font-family: "Jersey 25";
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.navbar button:hover {
+  color: white;
+}
+
+
+.jersey-25-regular {
+  font-family: "Jersey 25", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*====================================================Body========================================*/
+#nazev{
+text-align: center; /*zarovnani na stred*/
+  color: aliceblue;
+  font-family: "Jersey 25";
+}
+
+.oNas {
+  align-items: center; /* Vertikální zarovnání na střed */
+  justify-content: flex-start; /* Zarovnání na začátek */
+  gap: 35px; /* Mezera mezi obrázkem a textem */
+  padding: 20px; 
+  border-radius: 10px;
+
+}
+
+.oNas img {
+  width: 620px; /* Velikost obrázku */
+  height: auto; /* Zachování poměru stran */
+  border-radius: 30px; /* Zaoblení rohů obrázku */
+  transform: translateX(100px); /* Posunutí obrázku doprava o 20px */
+}
+
+.oNas {
+  flex: 0; /* Text zabere zbytek dostupného prostoru */
+}
+
+.oNas p {
+  font-size: 20px;
+  color:rgba(178, 178, 178, 0.995);
+  padding: 30px;
+  line-height: 1.6;
+}
+  /*=============================Info panel===================================*/
+  
+  .form-row {
+    position:absolute;
+    background-color: rgb(75, 73, 73);
+    border-color: 2px  #1f1f1f;
+    color: #d6e5e5;
+    padding: 25px;
+    margin: 20px;
+    border-radius: 10px;
+    height: 150px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family:"Jersey 25";
+    top: 170px;
+    left: 60%;
+    margin-bottom: 15px;
+  }
+  
+  .info-panel label {
+    display: block;
+    color: #d6e5e5;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  #deviz {
+    text-align: center;
+    font-size: 20px;
+    color: rgba(178, 178, 178, 0.995);
+    font-style: italic;
+}
+
+#site {
+    text-align: center;
+    font-size: medium;
+    margin-top: 10px; /* Mezera nad textem */
+  }
+
+label{
+  color: #d6e5e5;
+  font-family: "Jersey 25";
+  font-size: 20px;
+}
+
+#menicka {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* mezera mezi obrázky */
+    margin-top: 20px;
+    padding-top: 100px; /* mezera nad obrázky */
+}
+
+#menicka img {
+    width: 500px;   /* nastav požadovanou šířku */
+    height: auto;  /* nastav požadovanou výšku */
+    object-fit: cover; /* obrázek se ořízne, ale zachová rozměr */
+    border-radius: 20px; /* volitelné, zaoblení rohů */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* volitelné, stín */
+}
+#galerie {
+  padding-top: 100px; /* mezera nad obrázky */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+#galerie img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+   

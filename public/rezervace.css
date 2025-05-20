@@ -1,0 +1,422 @@
+body {
+  margin: 0;
+  font-family: "Jersey 25";
+  padding-top: 70px; /* výška navigační lišty + mezera */
+  background-color:#1f1f1f;
+}
+#logo{
+  cursor: pointer;
+  width: 50px; /* Nastavení šířky loga */
+  height: auto; /* Zachování poměru stran */
+  margin-right: auto;
+}
+#admin{
+  cursor: pointer;
+  width: 35px; /* Nastavení šířky loga */
+  height: 35px; /* Zachování poměru stran */
+  padding-top: 5px;
+}
+#confirm{
+  width: 35px; /* Nastavení šířky loga */
+  height: 35px; /* Zachování poměru stran */
+  padding-top: 5px;
+  padding-right: 10px;
+  visibility: hidden;                                               /*TADY VIZIBLE PRO OBRAZEK PODTVRIT NA NAVIGATION BAR*/
+}
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  background-color: black;
+  padding: 10px 20px;
+  position: fixed;  /* Udržuje navigaci na vrcholu při skrolování */
+  top: 0;
+  width: 98%;  /* Zajistí, že navigační lišta bude mít šířku celé stránky */
+  z-index: 1000;  /* Zajistí, že lišta bude vždy nad ostatním obsahem */
+}
+
+.navbar button {
+  background-color: transparent;
+  color: darkgray;
+  font-family: "Jersey 25";
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.navbar button:hover {
+  color: white;
+}
+  .jersey-25-regular {
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  p{
+    color: #d0dede;
+  }
+  h2 {
+    text-align: center;
+    color: #d0dede;
+  }  
+  h1 {
+    text-align: center;
+    color: #d0dede;
+  }
+  .stoly {
+    position: relative;
+    height: 395px;
+    width:  644px;
+    margin: 20px auto;
+    border: 2px solid #aaa;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  #vnirek {
+    background-image: url("Sprites/vnitrek.png");
+  }
+  
+  #terasa {
+    background-image: url("Sprites/terasa.png");
+  }
+  .stoly button{
+    background-color: rgba(50, 255, 98, 0.9);
+    border: 2px solid #039628;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+    transition: 0.2s;
+  }
+  .stoly .table-button-2 {
+    width: 40px;
+    height: 40px;
+  }
+  .stoly .table-button-3 {
+    width: 49px;
+    height: 49px;
+  }
+  .stoly .table-button-6 {
+    width: 50px;
+    height: 78px;
+  }
+  .stoly .table-button-rotated {
+    width: 48px;
+    height: 48px;
+    transform: rotate(45deg);
+    transform-origin: top left;
+  }
+
+  .stoly .table-button-terasa-1 {
+      border-radius:40%;
+    width: 5px;
+    height: 12px;
+  }
+
+  .stoly .table-button-terasa-2 {
+    border-radius:100%;
+  width: 39px;
+  height: 39px;
+}
+
+.stoly .table-button-terasa-6 {
+  width: 120px;
+  height: 40px;
+}
+
+.stoly .table-button-terasa-4 {
+    width: 57px;
+    height: 53px;
+  }
+  
+  /*==============================POZADÍ===========================*/
+  .pozadi {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Poloprůhledné pozadí */
+    z-index: -1; /* Pod ostatními prvky */
+  }
+/*==================================RIGHT PANEL===========================*/
+.right-panel, .left-panel {
+    position: fixed;
+    background-color:rgb(16, 16, 16);
+    color:#c1cdcd;
+    padding: 20px;
+    border-radius: 15px;
+    font-family: "Jersey 25";
+  }
+  .right-panel button, .left-panel button, .login-panel button, .account-panel button {
+    padding: 10px;
+    background-color: #c1cdcd;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 40%;
+    display: block;
+    margin: 20px auto; /* Zarovnání na střed */
+    font-family: "Jersey 25";
+    font-size: medium;
+}
+.right-panel p{
+    text-align: center;
+}
+.right-panel img, .login-panel img, .account-panel img {
+  position: absolute; 
+  top: 10px; 
+  right: 10px;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+}
+  .right-panel{
+    width: 300px;
+    height: 350px;
+    top: 250px;
+    right: 15px;
+    visibility: hidden;                                 /*TADY UDELAT VIDITELNY*/
+  }
+  .left-panel{
+    width: 300px;
+    height: 220px;
+    top: 270px;
+    left: 15px;
+  }
+  .form-row-1 {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 0 5px;
+  } 
+  .form-row-2{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 0 5px;
+  }
+   .form-row-3 {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 0 5px;
+  }
+  .form-row-1 label {
+    flex: 1;
+    padding-right: 10px;
+  }
+  .form-row-1 input {
+    flex: 2;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .form-row-2 label {
+    flex: 1;
+    padding-right: 10px;
+  }
+  .form-row-2 input {
+    flex: 2;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .form-row-3 label {
+    flex: 1;
+    padding-right: 10px;
+  }
+  .form-row-3 input {
+    flex: 2;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .form-column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding: 0 5px;
+  }
+  .form-column label {
+    margin-bottom: 5px;
+  }
+  .form-column textarea {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: vertical;
+  }
+  .right-panel button:hover {
+    background-color: #ddd;
+  }
+  
+  /*========================================LEFT PANEL======================*/
+  .left-panel h2 {
+    margin-top: 0;
+  }
+  .form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Mezera mezi prvky */
+    
+  }
+  .form-group label, .pole label {
+    margin: 0;
+  }
+  .form-group input {
+    flex: 1; /* Přizpůsobení šířky */
+    margin: 5px;
+    border-radius: 7px;
+  }
+  input[type="number"],
+  input[type="time"]{
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  #cas-od, #cas-do {
+    width: 20px;
+    height: 30px;
+  }
+/*=========================LOGIN PANEL==================================*/
+.login-panel {
+  width: 250px;
+  height: 220px;
+  top: -990px;
+  left: 75%;
+  background-color:rgb(16, 16, 16);
+  color:#c1cdcd;
+  padding: 20px;
+  border-radius: 15px;
+  font-family: "Jersey 25";
+  position: relative;
+  visibility: hidden;                                   /*VIZIBILITY*/
+}
+.login-panel h2, .account-panel h2 {
+  font-size: 20px;
+  padding-top: 2px;
+  text-align: center;
+}
+.pole {
+  margin-bottom: 15px;
+}
+.pole input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+/*==========================ACCOUNT PANEL============================================*/
+
+.account-panel{
+  width: 250px;
+  height: 100px;
+  top: -1230px;
+  left: 73%;
+  background-color:rgb(16, 16, 16);
+  color:#c1cdcd;
+  padding: 20px;
+  border-radius: 15px;
+  font-family: "Jersey 25";
+  position: relative;
+  visibility: hidden;    
+}
+/*=====================================================================*/
+.admin-rezervations {
+  position: relative;
+ top: -400px;
+ display:none;
+}
+.all-rezervations {
+  display: flex;
+  /*align-items: center;  /* Zarovnání elementů na střed vertikálně */
+  justify-content:center; 
+  gap: 80px;            /* Vzdálenost mezi jednotlivými elementy */
+  font-size: 24px;      /* Nastavení fontu na 24px */
+  margin: 10px;        /* Vzdálenost od ostatních elementů */
+  padding: 10px;        /* Padding pro trochu prostoru uvnitř */
+}
+
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  table-layout: fixed; /* pevné rozložení buněk */
+  border-collapse: collapse;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  font-family: 'Jersey 25';
+  color: #d0dede;
+  text-align: center;          /* horizontální zarovnání */
+  vertical-align: middle;      /* vertikální zarovnání */
+  word-wrap: break-word;       /* zalomení dlouhých slov */
+  overflow-wrap: break-word;
+  border-bottom: none;
+  border: none;
+}
+
+.head{
+border: 1px  #c1cdcd;
+}
+
+th {
+  color: white;
+}
+
+tr:hover {
+  background-color: rgb(81, 81, 81);
+}
+
+
+#edit {
+  display: block; 
+  margin: 0 auto;       /* horizontální zarovnání na střed */
+  max-width: 60px;      /* omezí velikost obrázku */
+  height: auto;
+  width: 25px;
+  padding: 4px;
+
+  cursor: pointer;
+  border-radius: 5px;
+}
+#delete{
+  display: block;
+  margin: 0 auto;       /* horizontální zarovnání na střed */
+  padding: 4px;
+  max-width: 60px;      /* omezí velikost obrázku */
+  height: auto;
+  width: 25px;
+
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+
+#edit:hover {
+  background-color: #1b610b;
+}
+#delete:hover {
+  background-color: rgb(142, 32, 32);
+}
+
+canvas { 
+  max-width: 600px;
+  margin: 20px auto;
+  display: block; 
+  max-height: 350px;
+  }

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title> Restaurace CR7 </title>  
+  <link rel="stylesheet" href="rezervace.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">  
+  <script defer src="main.js"></script>   
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <div class="navbar"> 
+    <img src="Sprites/cr7.png" alt="Logo"  width="50" onclick="window.location.href='index.html'" id="logo">
+    <img src="Sprites/confirm.png" alt="Confirm"  id="confirm">
+    <img src="Sprites/admin.png" alt="Admin" onclick="ZobrazitLoginPanel()" id="admin">
+    <button onclick="window.location.href='index.html'">O nas</button>
+    <button>Jidlo a piti</button>
+    <button>Galerie</button>
+    <button onclick="window.location.href='rezervace.html'">Rezervace</button>
+</div>
+   <h1>Vyber si stul a na nej klikni</h1>
+   <h2>Vnitřek restaurace</h2>
+   <div class="stoly" id="vnirek">
+
+     <button id="1" class="table-button-6" style="top: 77px; left: 41px;" maxPocetMist="6"></button>
+
+     <button id="14" class="table-button-3" style="top: 133px; left: 478px;" maxPocetMist="3"></button>
+     <button id="15" class="table-button-3" style="top: 45px; left: 478px;" maxPocetMist="3"></button>
+     <button id="17" class="table-button-3" style="top: 134px; left: 595px;" maxPocetMist="3"></button>
+     <button id="18" class="table-button-3" style="top: 228px; left: 595px;" maxPocetMist="3"></button>
+     <button id="16" class="table-button-3" style="top: 39px; left: 595px;" maxPocetMist="3"></button>
+
+     <button id="3" class="table-button-rotated" style="top: 203px; left: 66px;" maxPocetMist="4"></button>
+     <button id="4" class="table-button-rotated" style="top: 205px; left: 162px;" maxPocetMist="4"></button>
+     <button id="5" class="table-button-rotated" style="top: 205px; left: 267px;" maxPocetMist="4"></button>
+     <button id="6" class="table-button-rotated" style="top: 207px; left: 369px;" maxPocetMist="4"></button>
+     <button id="7" class="table-button-rotated" style="top: 207px; left: 463px;" maxPocetMist="4"></button>
+
+     <button id="2" class="table-button-2" style="top: 80px; left: 142px;" maxPocetMist="2"></button>
+     <button id="8" class="table-button-2" style="top: 317px; left: 40px;" maxPocetMist="2"></button>
+     <button id="9" class="table-button-2" style="top: 317px; left: 100px;" maxPocetMist="2"></button>
+     <button id="10" class="table-button-2" style="top: 317px; left: 160px;" maxPocetMist="2"></button>
+     <button id="11" class="table-button-2" style="top: 317px; left: 220px;" maxPocetMist="2"></button>
+     <button id="12" class="table-button-2" style="top: 317px; left: 280px;" maxPocetMist="2"></button>
+     <button id="13" class="table-button-2" style="top: 317px; left: 340px;" maxPocetMist="2"></button>
+    </div>
+
+   <h2>Terasa</h2>
+  
+   <div class="stoly" id="terasa">
+     <button id="T1" class="table-button-terasa-1" style="top: 50px; left: 18px;" maxPocetMist="1"></button>
+     <button id="T2" class="table-button-terasa-1" style="top: 74px; left: 18px;" maxPocetMist="1"></button>
+     <button id="T3" class="table-button-terasa-1" style="top: 96px; left: 18px;" maxPocetMist="1"></button>
+     <button id="T4" class="table-button-terasa-1" style="top: 26px; left: 44px;" maxPocetMist="1"></button>
+     <button id="T5" class="table-button-terasa-1" style="top: 26px; left: 77px;" maxPocetMist="1"></button>
+     <button id="T6" class="table-button-terasa-1" style="top: 49px; left: 105px;" maxPocetMist="1"></button>
+     <button id="T7" class="table-button-terasa-1" style="top: 74px; left: 105px;" maxPocetMist="1"></button>
+     <button id="T8" class="table-button-terasa-1" style="top: 99px; left: 105px;" maxPocetMist="1"></button>
+     <button id="T9" class="table-button-terasa-1" style="top: 124px; left: 105px;" maxPocetMist="1"></button>
+     
+     <button id="T10" class="table-button-terasa-2" style="top: 179px; left: 38px;" maxPocetMist="2"></button>
+     <button id="T11" class="table-button-terasa-2" style="top: 253px; left: 39px;" maxPocetMist="2"></button>
+     <button id="T12" class="table-button-terasa-2" style="top: 334px; left: 41px;" maxPocetMist="2"></button>
+     
+     <button id="T15" class="table-button-terasa-6" style="top: 318px; left: 250px;" maxPocetMist="6"></button>
+     <button id="T14" class="table-button-terasa-6" style="top: 150px; left: 142px;" maxPocetMist="6"></button>
+     
+     <button id="T18" class="table-button-terasa-4" style="top: 312px; left: 490px;" maxPocetMist="4"></button>
+     <button id="T17" class="table-button-terasa-4" style="top: 135px; left: 407px;" maxPocetMist="4"></button>
+     <button id="T13" class="table-button-terasa-4" style="top: 26px; left: 184px;" maxPocetMist="4"></button>
+     <button id="T16" class="table-button-terasa-4" style="top: 26px; left: 320px;" maxPocetMist="4"></button>
+    </div>
+
+    <div class="right-panel" style="visibility: hidden;">
+     <p>Rezervace</p>
+     <img src="Sprites/close.png" onclick="closeRightPanel()" id="close-right-panel">
+  
+      <div class="form-row-1">
+        <label for="jmeno">Jméno:</label>
+        <input type="text" id="jmeno" name="jmeno" required>
+      </div>
+  
+      <div class="form-row-2">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+  
+      <div class="form-row-3">
+        <label for="telefon">Tel. číslo:</label>
+        <input type="tel" id="telefon" name="telefon"
+               pattern="^(\+420 ?)?[0-9]{3} ?[0-9]{3} ?[0-9]{3}$"
+               required
+               title="Zadejte platné české číslo např. +420 123 456 789">
+      </div>
+  
+      <div class="form-column">
+        <label for="pozadavek">Speciální požadavek:</label>
+        <textarea id="pozadavek" name="pozadavek" rows="3"></textarea>
+      </div>
+  
+      <button type="submit" onclick="PoslatDataNaFireBase()">Odeslat</button>
+    </div>
+
+    <div class="left-panel">
+      <h2>Najit rezervace</h2>
+      
+      <div class="form-group">
+        <label for="pocet-lidi">Počet lidí</label>
+        <input type="number" id="pocet-lidi" name="pocet-lidi" min="1" max="100" required>
+        <label for="stul">Den</label>
+        <input type="date" id="datum" name="den">
+      </div>
+  
+      <div class="form-group">
+        <label for="cas-od">Od</label>
+        <input type="time" min="11:00" max="23:00" step="1800" id="cas-od" name="cas-od">
+        <label for="cas-do">Do</label>
+        <input type="time" min="11:00" max="23:00" step="1800" id="cas-do" name="cas-do">
+      </div>
+      <button type="submit" onclick="UkazatDostupneStoly()">Hledat</button>
+    </div>
+
+    <div class="login-panel">
+      <h2>Přihlášení</h2>
+     <img src="Sprites/close.png" onclick="ZavriLoginPanel()" id="close-right-panel">
+        <div class="pole">
+          <label for="username">Uživatelské jméno:</label>
+          <input type="text" id="username" name="username">
+        </div>
+        <div class="pole">
+          <label for="password">Heslo:</label>
+          <input type="password" id="password" name="password">
+        </div>
+        <button type="submit" onclick="PrihlasitSe()">Potvrdit</button>
+    </div>
+
+    <div class="account-panel">
+      <h2>admin</h2>
+     <img src="Sprites/close.png" onclick="ZavriAccountPanel()" id="close-right-panel">
+     
+     <button type="submit" onclick="OdhlasitSe()">Odhlasit se</button>
+    </div>
+
+    <div class="admin-rezervations">
+      
+      
+      <canvas id="barChart"></canvas>
+    </div>
+      
+    
+
+  </body>
+</html>
