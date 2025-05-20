@@ -323,6 +323,9 @@ async function VytvorSeznamRezervaci() {
             const tr = document.createElement('tr');
             ["stul", "pocet", "cas_od", "cas_do", "jmeno", "telefon", "email"].forEach(atribut => {
                 const td = document.createElement('td');
+                td.id = atribut;
+                td.byloOpraveno = false; // Nastavení stavu na false
+                td.onclick = function() {this.byloOpraveno = true;}
                 td.textContent = rezervace[atribut];
                 tr.appendChild(td);
             });
